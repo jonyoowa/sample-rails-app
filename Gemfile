@@ -33,6 +33,10 @@ gem 'faker'
 gem 'will_paginate'
 #
 gem 'bootstrap-will_paginate'
+#
+gem 'carrierwave'      
+#    
+gem 'mini_magick'
 
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
@@ -53,6 +57,11 @@ gem 'jbuilder', '~> 2.5'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
+
+group :production do
+  gem 'pg',  '0.20.0'
+  gem 'fog', '1.42'
+end
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
